@@ -1,0 +1,438 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  color: #fff;
+}
+
+
+@media (min-width: 1025px) {
+  /* big landscape tablets, laptops, and desktops */
+  .entry {
+    height: max-content;
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .entry h1 {
+    font-size: 150px;
+    letter-spacing: 8px;
+    word-spacing: 2px;
+  }
+
+  .nav {
+    float: right;
+    width: fit-content;
+    list-style-type: none;
+    margin-top: 50px;
+    padding-right: 40px;
+    /* background-color: bisque; */
+  }
+
+  .nav-list li {
+    float: right;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 0px 15px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  .logo {
+    margin: 30px;
+    height: 150px;
+    width: 250px;
+  }
+
+  .nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .nav ul li a:hover {
+    color: aquamarine;
+  }
+
+  .detel {
+    margin-left: 8%;
+    margin-top: 13%;
+  }
+
+  .detel h3 {
+    font-size: 100px;
+    color: #fff;
+    margin-bottom: 20px;
+    z-index: 10;
+  }
+
+  .surname {
+    color: #fff;
+    z-index: 10;
+  }
+
+  .detel p {
+    color: #fff;
+    /* line-height: 22px; */
+    font-size: x-large;
+    word-spacing: 5px;
+  }
+
+  .detel a {
+    background: #212121;
+    padding: 10px 18px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    display: inline-block;
+    margin: 30px;
+    border-radius: 5px;
+  }
+
+  .images {
+    width: 45%;
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+    right: 30px;
+  }
+
+  .images img {
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%);
+    transition: bottom 1s, left 1s;
+  }
+
+  .images .myself {
+    z-index: 10;
+  }
+
+  .images .shape {
+    z-index: 1;
+    -webkit-filter: blur(5px);
+    color: transparent;
+  }
+
+  .images:hover .shape {
+    bottom: 25px;
+    left: 480px;
+  }
+
+  .images:hover .myself {
+    left: 45%;
+  }
+
+  .glow {
+    color: aquamarine;
+  }
+
+  .about-section {
+    padding: 50px;
+    text-align: center;
+    color: white;
+    margin-top: 30px; /* Adjust the value as needed */
+    margin-bottom: 30px;
+  }
+
+  .aboutme-cards-education {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    margin-top: 40px; /* Adjust the value as needed */
+    margin-bottom: 40px;
+  }
+
+  .aboutme-cards-education h2{
+    font-size: 50px;
+    margin-bottom: 40px;
+  }
+
+  .aboutme-cards-education > .row > .column > .card > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the card and maintains aspect ratio */
+  }
+
+  .aboutme-cards-education > .row > .column > .card {
+    animation: float 3s ease-in-out infinite;
+    border-radius: 50%;
+    height: 500px;
+    width: 550px;
+    box-shadow: 10px 10px 20px #1d2b33,-10px 10px 20px #111111;
+  }
+
+
+  @keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+  .row {
+    display: flex;
+    justify-content: space-around; 
+    flex-wrap: nowrap; 
+    width: 90%; 
+  }
+  
+  .column {
+    padding: 10px;
+    flex: 1;
+    /* max-width: 25%; */
+    box-sizing: border-box;
+    display: flex; /* Add this */
+    justify-content: center; /* Add this */
+    align-items: center; /* Add this */
+  }
+  
+  .card {
+    overflow: hidden; /* Ensure content stays within rounded corners */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    box-shadow: 10px 10px 5px;
+    border-radius: 30%;
+  }
+
+
+  .title {
+    color: grey;
+  }
+
+  .container {
+    margin-bottom: 200px;
+    overflow-x:hidden
+  }
+
+
+  .card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0.25rem;
+    overflow: hidden;
+    background-color: #fff;
+  }
+
+  .education-content{
+    margin-bottom: 40px;
+  }
+  
+  hr{
+    border: 1px solid #062d2d;
+    width:85%;
+    margin: auto;
+  }
+
+  .aboutmy-projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 1320px;
+    width: 90%;
+    margin: 0 auto; /* Center the container */
+  }
+  
+  .myproject-right, .myproject-left {
+    width: 100%; /* Make each project take full width of its container */
+    display: flex;
+    height: 500px; /* Set the height of each project to 500px */
+    margin-bottom: 5%;
+    margin-top: 5%;
+  }
+  
+  .myproject-right .project-image {
+    order: 1;
+  }
+  
+  .myproject-left .projects-content {
+    order: 1;
+  }
+  
+  .myproject-right .projects-content {
+    text-align: center;
+    flex: 0 0 770px; /* Fixed width of 770px */
+    height: 500px; /* Set the height of the content to 500px */
+    padding: 0 20px; /* Add equal padding to the left and right sides */
+    margin-left: 8%;
+    margin-right: 15%;
+  }
+
+  .myproject-left .projects-content {
+    text-align: center;
+    flex: 0 0 770px; /* Fixed width of 770px */
+    height: 500px; /* Set the height of the content to 500px */
+    padding: 0 20px; /* Add equal padding to the left and right sides */
+    margin-right: 5%;
+    margin-left: 12%;
+  }
+  
+  .project-image img {
+    text-align: center;
+    flex: 0 0 550px; /* Fixed width of 550px */
+    height: 500px; /* Set the height of the image to 500px */
+  }
+  
+  .myproject-left .project-image {
+    margin-left: 15%; /* Remove the left margin */
+  }
+  
+  .aboutmy-projects img {
+    height: 500px;
+    width: 550px; /* Update the image width to 550px */
+  }
+
+  .aboutmy-project h3{
+    font-size: 40px;
+  }
+
+  .aboutmy-project span{
+    font-size: 30px;
+  }
+  
+  .aboutmy-project p{
+    font-size: 26px;
+  }
+  
+  .project-image {
+    position: relative;
+    display: inline-block;
+    box-shadow: 10px 10px 20px #1d2b33,-10px 10px 20px #111111;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .project-image:hover .overlay {
+    opacity: 1;
+  }
+
+  .overlay a {
+    color: white;
+    text-decoration: none;
+    font-size: 44px;
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    margin-top: 30px;
+  }
+  
+  .icon {
+    text-decoration: none;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    /* background-color: hsla(209 20% 70% / 20%); */ /* For dark theme */
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+      rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  }
+  
+  .icon > i {
+    color: #279c8d;
+    font-size: 1.8rem;
+    transition: all 0.2s;
+  }
+  
+  .icon:hover > i {
+    scale: 1.2;
+    color: #f1f1f1;
+  }
+  
+  .icon:before {
+    background: var(--color);
+    content: "";
+    position: absolute;
+    width: 130%;
+    height: 130%;
+    left: -110%;
+    top: 80%;
+    transform: rotate(45deg);
+  }
+  
+  .icon:hover:before {
+    animation: slide 0.7s forwards;
+  }
+  
+  @keyframes slide {
+    50% {
+      left: 10%;
+      top: -40%;
+    }
+  
+    100% {
+      left: -15%;
+      top: -15%;
+    }
+  }
+  
+  .icon:has(.fa-instagram) {
+    --color: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
+  }
+  .icon:has(.fa-linkedin-in) {
+    --color: #0077b5;
+  }
+  .icon:has(.fa-discord) {
+    --color: #1da1f2;
+  }
+  .icon:has(.fa-github) {
+    --color: #333;
+  }
+
+  
+}
+
+.container .entry .first .a,
+.container .entry .first .b,
+.container .entry .second,
+.container .entry .third,
+.container .entry .fourth .c,
+.container .entry .fourth .d {
+  display: inline-block;
+}
